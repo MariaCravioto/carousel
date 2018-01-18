@@ -5,20 +5,20 @@
 }
 
 body {
-  text-align: center;
   background-color: #000000;
+  text-align: center;
 }
 
 h1 {
-  margin-bottom: 100px;
   color: #FFFFFF;
- font-family: 'Satisfy', cursive;
+  font-family: 'Satisfy', cursive;
+  margin-bottom: 10px;
 }
 
 img {
-  width: 45%;
-  border-radius: 10px;
   border: 10px solid #FFFFFF;
+  border-radius: 10px;
+  width: 45%;
 }
 
 
@@ -31,11 +31,11 @@ img {
 }
 
 .control {
-  width: 20px;
-  height: 20px;
-  margin: 10px;
   border: 1px solid #FFFFFF;
   border-radius: 50%;
+  height: 20px;
+  margin: 10px;
+  width: 20px;
 }
 
 .previous, .next {
@@ -44,6 +44,6 @@ img {
 }
 
 .control:hover, .previous:hover, .next:hover {
-  background: #4DB6AC;
-  border: 1px solid #4DB6AC;
+  background: #800080;
+  border: 1px solid #800080;
 }

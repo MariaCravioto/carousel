@@ -1,35 +1,51 @@
-$(document).ready(loadPage);
+$(document).ready(function(){
+  ($(".control").click(showImage));
+})
 
+function showImage () {
+ //console.log(this.dataset);
+ var $target = $(this).data("target");
+ //console.log($target);
+ var $actualImage = $("div.active");
+ //console.log($("[data-slide='"+$target+"']"));
+ var $newImage = $("div[data-slide='" + $target +"']");
+ $actualImage.removeClass("active");
+ $newImage.addClass("active");
+}
+
+
+
+/*
 var target = 0;
 
 var loadPage = function () {
 
-  //Elementos
+  //Elements
   var $buttons = $(".control");
   var $previous = $(".previous");
   var $next = $(".next");
 
-  //Eventos
+  //Events
   $buttons.click(changeImage);
   $previous.click(previousImage);
   $next.click(nextImage);
 };
 
-//funcion de los botones
+//function of the buttons
 var changeImage = function () {
   target = parseInt ($(this).data("target"));
   showImage(target);
 };
 
-//funcion de imagen previa
-var previousImage = function(e) {
+//previous image function
+var previousImage = function (e) {
   e.preventDefault();
   target = target - 1;
   target = (target < 0) ? 6 : target;
   showImage(target);
 };
 
-//funcion de siguiente imagen
+//next image function
 var nextImage = function (e) {
   e.preventDefault();
   target = target + 1;
@@ -38,10 +54,11 @@ var nextImage = function (e) {
 };
 
 
-//funcion para ostrar la imagen
+//function to show the image
 var showImage = function (target) {
   var $lastSlide = $("div.active");
   var $slide = $("div[data-slide=" " + target + ""]");
   $lastSlide.removeClass("active");
   $slide.addClass("active");
 };
+*/
